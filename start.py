@@ -15,7 +15,8 @@ answer_key = pd.read_csv("answer_key.csv")
 # Fetch the html content of response page
 HTML_CONTENT = ""
 response_url = st.text_input(
-    "Resoponse URL", value="https://cdn.digialm.com//per/g01/pub/585/touchstone/AssessmentQPHTMLMode1//GATE2454/GATE2454S5D2005/17402089937868153/DA25S55042104_GATE2454S5D2005E1.html")
+    "Resoponse URL")
+# value="https://cdn.digialm.com//per/g01/pub/585/touchstone/AssessmentQPHTMLMode1//GATE2454/GATE2454S5D2005/17402089937868153/DA25S55042104_GATE2454S5D2005E1.html"
 if response_url:
     response = requests.get(response_url, timeout=30)
     if response.status_code == 200:
